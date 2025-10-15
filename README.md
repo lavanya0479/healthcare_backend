@@ -31,27 +31,32 @@ It allows **patients, doctors, and admins** to register, log in, and manage reco
 ```bash
 git clone https://github.com/<your-username>/healthcare-backend.git
 cd healthcare-backend
+```
 ---
 ## ⚙️ Installation and Setup
 2️⃣ Install Dependencies
 ```bash
 npm install
+```
 ---
 3️⃣ Configure Environment Variables
 
 Create a .env file in the project root:
-
+```bash
 PORT=5000
 MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/healthcaredb
 JWT_SECRET=your_jwt_secret_key
+```
+---
 
 4️⃣ Run the Server
 ```bash
 npm run dev
+```
 ---
 The backend will start at:
 👉 http://localhost:5000
----
+
 🔑 Authentication APIs
 Method	Endpoint	Description
 POST	/api/auth/register	Register a new user (patient/doctor/admin)
@@ -98,6 +103,7 @@ Login → get JWT token
 Set token in Authorization Header
 
 Access secure endpoints (doctor, patient, mapping)
+
 
 
 
