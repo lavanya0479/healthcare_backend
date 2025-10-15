@@ -56,53 +56,51 @@ npm run dev
 ---
 The backend will start at:
 👉 http://localhost:5000
-
+###
 🔑 Authentication APIs
 Method	Endpoint	Description
-POST	/api/auth/register	Register a new user (patient/doctor/admin)
-POST	/api/auth/login	Login and receive JWT token
+- POST	/api/auth/register	Register a new user (patient/doctor/admin)
+- POST	/api/auth/login	Login and receive JWT token
 ---
 🧑‍⚕️ Doctor APIs
-Method	Endpoint	Description
-GET	/api/doctors/	Get all doctors
-GET	/api/doctors/:id	Get doctor by ID
-POST	/api/doctors/	Create a new doctor
-PUT	/api/doctors/:id	Update doctor
-DELETE	/api/doctors/:id	Delete doctor
+- Method	Endpoint	Description
+- GET	/api/doctors/	Get all doctors
+- GET	/api/doctors/:id	Get doctor by ID
+- POST	/api/doctors/	Create a new doctor
+- PUT	/api/doctors/:id	Update doctor
+- DELETE	/api/doctors/:id	Delete doctor
 ---
 👩‍⚕️ Patient APIs
-Method	Endpoint	Description
-GET	/api/patients/	Get all patients
-GET	/api/patients/:id	Get patient by ID
-POST	/api/patients/	Create a new patient
-PUT	/api/patients/:id	Update patient
-DELETE	/api/patients/:id	Delete patient
+- Method	Endpoint	Description
+- GET	/api/patients/	Get all patients
+- GET	/api/patients/:id	Get patient by ID
+- POST	/api/patients/	Create a new patient
+- PUT	/api/patients/:id	Update patient
+- DELETE	/api/patients/:id	Delete patient
 ---
 🔗 Patient–Doctor Mapping APIs
-Method	Endpoint	Description
-POST	/api/mappings/	Assign a doctor to a patient
-GET	/api/mappings/	Get all patient–doctor mappings
-GET	/api/mappings/:patientId	Get doctors for a specific patient
-DELETE	/api/mappings/:id	Remove doctor–patient mapping
+- Method	Endpoint	Description
+- POST	/api/mappings/	Assign a doctor to a patient
+- GET	/api/mappings/	Get all patient–doctor mappings
+- GET	/api/mappings/:patientId	Get doctors for a specific patient
+- DELETE	/api/mappings/:id	Remove doctor–patient mapping
 ---
-🛡️ JWT Authentication
+## 🛡️ JWT Authentication
 
-All protected routes require an Authorization Header:
+- All protected routes require an Authorization Header:
+- Authorization: Bearer <your_jwt_token>
+- Tokens are generated during login and verified by authMiddleware.js.
+---
+## 🧪 Testing with Postman
 
-Authorization: Bearer <your_jwt_token>
+- 1) Register a user (doctor/patient) → /api/auth/register
 
+- 2) Login → get JWT token
 
-Tokens are generated during login and verified by authMiddleware.js.
+- 3) Set token in Authorization Header
 
-🧪 Testing with Postman
+- 4) Access secure endpoints (doctor, patient, mapping)
 
-Register a user (doctor/patient) → /api/auth/register
-
-Login → get JWT token
-
-Set token in Authorization Header
-
-Access secure endpoints (doctor, patient, mapping)
 
 
 
