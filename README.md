@@ -29,7 +29,7 @@ It allows **patients, doctors, and admins** to register, log in, and manage reco
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/healthcare-backend.git
+git clone https://github.com/lavanya0479/healthcare_backend.git
 cd healthcare-backend
 ```
 ---
@@ -93,13 +93,14 @@ Method	Endpoint	Description
 ---
 ## 🧪 Testing with Postman
 
-- 1) Register a user (doctor/patient) → /api/auth/register
+- Register a user (doctor/patient) → /api/auth/register
 
-- 2) Login → get JWT token
+- Login → get JWT token
 
-- 3) Set token in Authorization Header
+- Set token in Authorization Header
 
-- 4) Access secure endpoints (doctor, patient, mapping)
+- Access secure endpoints (doctor, patient, mapping)
+
 
 
 
